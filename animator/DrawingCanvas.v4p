@@ -53,6 +53,8 @@
    </PIN>
    <PIN pinname="ScaleXY" slicecount="2" values="1.17,1.17">
    </PIN>
+   <PIN pinname="TranslateXY" slicecount="2" visible="1" values="-0.01,-0.01">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="2" dstpinname="Texture">
    </LINK>
@@ -87,5 +89,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="6" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1950" top="1320" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1950" top="1320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.04,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="3" dstpinname="TranslateXY">
    </LINK>
    </PATCH>
