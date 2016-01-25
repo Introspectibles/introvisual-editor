@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\subpatches\animator\AcceptClearMenu.v4p" systemname="AcceptClearMenu" filename="C:\vvvv\projects\meegi\subpatches\animator\AcceptClearMenu.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\AcceptClearMenu.v4p" systemname="AcceptClearMenu" filename="C:\vvvv\projects\meegi\subpatches\animator\AcceptClearMenu.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="4200" top="10260" width="11475" height="7320">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="915" top="1485" width="100" height="100">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="900" top="780" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="..\..\assets\BtnAccept.png,..\..\assets\BtnClear.png">
+   <PIN pinname="Input String" slicecount="2" visible="1" values="..\assets\BtnAccept.png,..\assets\BtnClear.png">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
