@@ -1,0 +1,379 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\meegi\subpatches\animator\InputDevice.v4p" systemname="InputDevice" filename="C:\vvvv\projects\meegi\subpatches\animator\InputDevice.v4p" scrollx="15" scrolly="-315">
+   <BOUNDS type="Window" left="4410" top="4740" width="11805" height="11175">
+   </BOUNDS>
+   <PACK Name="image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE componentmode="Hidden" id="11" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
+   <BOUNDS height="0" left="3915" top="3865" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="10" nodename="NewIds.v4p" systemname="NewIds" filename="%VVVV%\addonpack\lib\nodes\plugins\NewIds.v4p">
+   <BOUNDS height="100" left="1920" top="5500" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <BOUNDS left="1920" top="5500" type="Box">
+   </BOUNDS>
+   <PIN pinname="Position XY" visible="1" slicecount="2" values="-0.946285784044436,-0.793078190807544">
+   </PIN>
+   <PIN pinname="Output" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="9" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
+   <BOUNDS height="0" left="4125" top="4885" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="-0.946285784044436,-0.793078190807544">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="2640" top="3130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3930" top="3115" width="1455" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3930" top="3115" width="1425" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; emulating touch|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="6" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mouse">
+   </PIN>
+   <BOUNDS type="Box" left="2640" top="2130" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2640" top="2130" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="8" dstpinname="Mouse">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Left Button" dstnodeid="11" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Left Button" dstnodeid="9" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="3125" y="3958">
+   </LINKPOINT>
+   <LINKPOINT x="4030" y="4298">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Touch Id" linkstyle="VHV" srcnodeid="11" srcpinname="Output">
+   <LINKPOINT x="2580" y="4725">
+   </LINKPOINT>
+   <LINKPOINT x="3285" y="5045">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="6810" top="2275" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6810" top="2275" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Touch">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="420" top="2425" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="420" top="2425" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Emulate Touch|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="6810" top="2860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="3" dstpinname="Touch Data">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3435" top="6250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3645" top="6745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3855" top="7285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Switch" linkstyle="VHV" hiddenwhenlocked="1">
+   <LINKPOINT x="450" y="6235">
+   </LINKPOINT>
+   <LINKPOINT x="3465" y="6235">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Switch" linkstyle="VHV" hiddenwhenlocked="1">
+   <LINKPOINT x="450" y="6715">
+   </LINKPOINT>
+   <LINKPOINT x="3675" y="6715">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Switch" linkstyle="VHV" hiddenwhenlocked="1">
+   <LINKPOINT x="450" y="7300">
+   </LINKPOINT>
+   <LINKPOINT x="3885" y="7300">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Id" dstnodeid="2" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="6795" y="4675">
+   </LINKPOINT>
+   <LINKPOINT x="3750" y="4675">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="1" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Is new" dstnodeid="0" dstpinname="Input 2" linkstyle="VHV" hiddenwhenlocked="0">
+   <LINKPOINT x="1980" y="6695">
+   </LINKPOINT>
+   <LINKPOINT x="4350" y="6345">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Is New" dstnodeid="0" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="7620" y="5200">
+   </LINKPOINT>
+   <LINKPOINT x="4170" y="5200">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="2640" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|Mouse Animator|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Input Value" dstnodeid="6" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="6825" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|Touch Data Animator|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3015" top="8535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Id" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is New" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="15" dstpinname="Id" linkstyle="Bezier">
+   <LINKPOINT x="3450" y="7530">
+   </LINKPOINT>
+   <LINKPOINT x="3045" y="7530">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="15" dstpinname="PositionXY" linkstyle="Bezier">
+   <LINKPOINT x="3660" y="7763">
+   </LINKPOINT>
+   <LINKPOINT x="3450" y="7763">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="15" dstpinname="Is New">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3015" top="9390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3015" top="9390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Touch Data|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Touch Data" dstnodeid="16" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="NIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\NIL (Spreads).v4p" nodename="NIL (Spreads)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="4365" top="3450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="1545" top="3990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2655" top="3555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="PositionXY" dstnodeid="19" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="XYZ" dstnodeid="18" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="8880" top="1380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|Animator A/R|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="18" dstpinname="Transform" linkstyle="Bezier">
+   <LINKPOINT x="8880" y="2805">
+   </LINKPOINT>
+   <LINKPOINT x="1605" y="2805">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="xy (2d)" nodename="xy (2d)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="1545" top="4425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="XYZ Transformed" dstnodeid="21" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="XY" dstnodeid="10" dstpinname="Position XY" linkstyle="VHV">
+   <LINKPOINT x="1605" y="5085">
+   </LINKPOINT>
+   <LINKPOINT x="2640" y="5085">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="XY" dstnodeid="9" dstpinname="Input 2" linkstyle="VHV">
+   <LINKPOINT x="1605" y="4778">
+   </LINKPOINT>
+   <LINKPOINT x="4620" y="4778">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="6105" top="3810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="7215" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="-0.946285784044436,-0.793078190807544">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="XYZ" dstnodeid="24" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="24" dstpinname="Transform" linkstyle="Bezier">
+   <LINKPOINT x="8880" y="2715">
+   </LINKPOINT>
+   <LINKPOINT x="6165" y="2715">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="xy (2d)" nodename="xy (2d)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="6105" top="4245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="XYZ Transformed" dstnodeid="22" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="PositionXY" dstnodeid="23" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="XY" dstnodeid="1" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="6090" y="5625">
+   </LINKPOINT>
+   <LINKPOINT x="3960" y="5625">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>
