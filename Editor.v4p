@@ -1,12 +1,12 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="975" top="2940" width="14250" height="14535">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="495" top="1725" width="14250" height="14535">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="0">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="0">
    <BOUNDS type="Node" left="3510" top="9015" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3510" top="9015" width="6000" height="4500">
@@ -28,7 +28,7 @@
    <PIN pinname="Touch Data" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="1">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="3675" top="8520" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
@@ -80,13 +80,13 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="0" dstpinname="Aspect Ratio">
    </LINK>
-   <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\DX11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="14">
+   <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="1500" top="7890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="15">
+   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="1515" top="8295" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -114,7 +114,7 @@
    <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="76">
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="76">
    <BOUNDS type="Node" left="5520" top="10260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Touch Data" visible="1">
@@ -166,7 +166,7 @@
    </NODE>
    <LINK srcnodeid="78" srcpinname="XYZ Transformed" dstnodeid="81" dstpinname="XYZ">
    </LINK>
-   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="83">
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="83">
    <BOUNDS type="Node" left="5535" top="12135" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Id" visible="1">
@@ -243,9 +243,9 @@
    </PIN>
    </NODE>
    <NODE systemname="TransformLockButtons" filename="animator\TransformLockButtons.v4p" nodename="animator\TransformLockButtons.v4p" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="4888" top="3231" width="3000" height="270">
+   <BOUNDS type="Node" left="4888" top="4281" width="3000" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="45" top="930" width="9910" height="8800">
+   <BOUNDS type="Box" left="45" top="1980" width="9910" height="8800">
    </BOUNDS>
    <BOUNDS type="Window" left="6105" top="3060" width="12840" height="7215">
    </BOUNDS>
@@ -261,15 +261,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="40" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 2" linkstyle="VHV">
-   <LINKPOINT x="4920" y="3780">
+   <LINKPOINT x="4920" y="4770">
    </LINKPOINT>
-   <LINKPOINT x="4020" y="3780">
+   <LINKPOINT x="4020" y="4770">
    </LINKPOINT>
    </LINK>
    <NODE systemname="RecordButton" filename="animator\RecordButton.v4p" nodename="animator\RecordButton.v4p" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="3484" top="3228" width="0" height="0">
+   <BOUNDS type="Node" left="3484" top="4278" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="1125" width="9385" height="8995">
+   <BOUNDS type="Box" left="0" top="2175" width="9385" height="8995">
    </BOUNDS>
    <BOUNDS type="Window" left="2280" top="4560" width="16200" height="13440">
    </BOUNDS>
@@ -281,15 +281,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layer 3" linkstyle="Bezier">
-   <LINKPOINT x="3510" y="5993">
+   <LINKPOINT x="3510" y="6693">
    </LINKPOINT>
-   <LINKPOINT x="4170" y="5993">
+   <LINKPOINT x="4170" y="6343">
    </LINKPOINT>
    </LINK>
    <NODE systemname="RecordTransforms" filename="animator\RecordTransforms.v4p" componentmode="Hidden" id="86" nodename="animator\RecordTransforms.v4p">
-   <BOUNDS type="Node" left="4665" top="4290" width="5955" height="270">
+   <BOUNDS type="Node" left="4665" top="5340" width="5955" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4665" top="4290" width="4800" height="3600">
+   <BOUNDS type="Box" left="4665" top="5340" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="1770" top="1050" width="15240" height="16455">
    </BOUNDS>
@@ -317,9 +317,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="122" dstpinname="Input Node" linkstyle="Bezier">
-   <LINKPOINT x="4710" y="8483">
+   <LINKPOINT x="4710" y="9183">
    </LINKPOINT>
-   <LINKPOINT x="8400" y="8483">
+   <LINKPOINT x="8400" y="8833">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="40" srcpinname="Scale Unlocked" dstnodeid="86" dstpinname="Scale Unlocked">
@@ -330,30 +330,36 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
-   <BOUNDS type="Node" left="7320" top="1335" width="100" height="100">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
+   <BOUNDS type="Node" left="7230" top="3495" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7320" top="1335" width="4800" height="3600">
+   <BOUNDS type="Box" left="7230" top="3495" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="14655" top="4950" width="9000" height="6000">
+   <BOUNDS type="Window" left="14040" top="8550" width="11865" height="9450">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Canvas Transform" visible="1">
    </PIN>
+   <PIN pinname="Brush Scale" visible="1">
+   </PIN>
+   <PIN pinname="Brush Color" visible="1">
+   </PIN>
+   <PIN pinname="Touch" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 4" linkstyle="Bezier">
-   <LINKPOINT x="7320" y="5055">
+   <LINKPOINT x="7260" y="6495">
    </LINKPOINT>
-   <LINKPOINT x="4350" y="5055">
+   <LINKPOINT x="4320" y="5775">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="87" srcpinname="Canvas Transform" dstnodeid="86" dstpinname="Canvas Transform">
    </LINK>
    <NODE systemname="AcceptClearMenu" filename="animator\AcceptClearMenu.v4p" componentmode="Hidden" id="102" nodename="animator\AcceptClearMenu.v4p">
-   <BOUNDS type="Node" left="10710" top="4980" width="100" height="100">
+   <BOUNDS type="Node" left="10710" top="6030" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10710" top="4980" width="4800" height="3600">
+   <BOUNDS type="Box" left="10710" top="6030" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="4200" top="10260" width="11475" height="7320">
    </BOUNDS>
@@ -371,19 +377,19 @@
    <LINK srcnodeid="102" srcpinname="Accept" dstnodeid="123" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="86" srcpinname="Recording done" dstnodeid="102" dstpinname="Display menu" linkstyle="VHV">
-   <LINKPOINT x="10620" y="4775">
+   <LINKPOINT x="10620" y="5825">
    </LINKPOINT>
-   <LINKPOINT x="12135" y="4735">
+   <LINKPOINT x="12135" y="5785">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="102" srcpinname="Clear" dstnodeid="86" dstpinname="Reset">
-   <LINKPOINT x="12150" y="5739">
+   <LINKPOINT x="12150" y="6789">
    </LINKPOINT>
-   <LINKPOINT x="12810" y="5763">
+   <LINKPOINT x="12810" y="6813">
    </LINKPOINT>
-   <LINKPOINT x="12810" y="3882">
+   <LINKPOINT x="12810" y="4932">
    </LINKPOINT>
-   <LINKPOINT x="10560" y="3891">
+   <LINKPOINT x="10560" y="4941">
    </LINKPOINT>
    </LINK>
    <NODE systemname="InputDevice" filename="animator\InputDevice.v4p" componentmode="Hidden" id="103" nodename="animator\InputDevice.v4p">
@@ -401,23 +407,23 @@
    <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Emulate Touch">
    </LINK>
    <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="40" dstpinname="Touch" linkstyle="VHV">
-   <LINKPOINT x="3540" y="2565">
+   <LINKPOINT x="3540" y="2915">
    </LINKPOINT>
-   <LINKPOINT x="4875" y="2565">
+   <LINKPOINT x="4875" y="3265">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="67" dstpinname="Touch">
    </LINK>
    <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="86" dstpinname="Touch" linkstyle="VHV">
-   <LINKPOINT x="3540" y="3098">
+   <LINKPOINT x="3540" y="3448">
    </LINKPOINT>
-   <LINKPOINT x="9570" y="3098">
+   <LINKPOINT x="9570" y="3798">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="102" dstpinname="Touch data" linkstyle="VHV">
-   <LINKPOINT x="3510" y="2295">
+   <LINKPOINT x="3510" y="2645">
    </LINKPOINT>
-   <LINKPOINT x="10740" y="2295">
+   <LINKPOINT x="10740" y="2995">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="0" srcpinname="Mouse State" dstnodeid="33" dstpinname="Input Value" linkstyle="Bezier">
@@ -434,7 +440,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE id="89" systemname="InputMorph (Transform Spectral)" filename="..\..\..\vvvv.nodes\plugins\SpectralInputMorph\SpectralInputMorph.csproj" nodename="InputMorph (Transform Spectral)" componentmode="Hidden">
+   <NODE id="89" systemname="InputMorph (Transform Spectral)" filename="..\vvvv.nodes\plugins\SpectralInputMorph\SpectralInputMorph.csproj" nodename="InputMorph (Transform Spectral)" componentmode="Hidden">
    <PIN pinname="Switch" slicecount="1" visible="1" values="1">
    </PIN>
    <BOUNDS type="Node" left="7000" top="7500" width="100" height="100">
@@ -464,8 +470,6 @@
    <PIN pinname="Color" slicecount="1" values="|1.00000,0.12995,0.12995,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="91" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 7">
-   </LINK>
    <LINK srcnodeid="92" srcpinname="Transform Out" dstnodeid="91" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="92" dstpinname="Transform In">
@@ -474,14 +478,8 @@
    </LINK>
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="90" dstpinname="Input">
    </LINK>
-   <NODE systemname="Painting" filename="animator\Painting.v4p" nodename="animator\Painting.v4p" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="9585" top="7050" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-16950" top="6120" width="16140" height="13050">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="Hidden" id="128">
-   <BOUNDS type="Node" left="9660" top="1935" width="100" height="100">
+   <BOUNDS type="Node" left="7155" top="2310" width="1410" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="-18000" top="4020" width="17445" height="11550">
    </BOUNDS>
@@ -489,11 +487,25 @@
    </PIN>
    <PIN pinname="Touch" visible="1">
    </PIN>
+   <PIN pinname="Brush Size" visible="1">
+   </PIN>
+   <PIN pinname="Brush Color" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 5">
    </LINK>
    <LINK srcnodeid="128" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 6">
    </LINK>
-   <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="128" dstpinname="Touch">
+   <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="128" dstpinname="Touch" linkstyle="VHV">
+   <LINKPOINT x="3880" y="2100">
+   </LINKPOINT>
+   <LINKPOINT x="6815" y="2115">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Brush Size" dstnodeid="87" dstpinname="Brush Scale">
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Brush Color" dstnodeid="87" dstpinname="Brush Color">
+   </LINK>
+   <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="87" dstpinname="Touch">
    </LINK>
    </PATCH>

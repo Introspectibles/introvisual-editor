@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0">
    <BOUNDS type="Window" left="1770" top="1050" width="15240" height="16455">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -84,7 +84,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="11">
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="8715" top="780" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
