@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="495" top="1725" width="14250" height="14535">
+   <BOUNDS type="Window" left="1635" top="600" width="14250" height="14535">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -336,12 +336,12 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="7455" top="2970" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="-17610" top="13815" width="11865" height="9450">
+   <BOUNDS type="Window" left="4065" top="4530" width="13575" height="8835">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -356,6 +356,8 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    <PIN pinname="Drawing Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Eraser" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 4" linkstyle="Bezier">
@@ -482,6 +484,8 @@
    <PIN pinname="Brush Color" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Eraser" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 5">
@@ -659,5 +663,7 @@
    </LINKPOINT>
    <LINKPOINT x="4695" y="2520">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Eraser" dstnodeid="87" dstpinname="Eraser">
    </LINK>
    </PATCH>
