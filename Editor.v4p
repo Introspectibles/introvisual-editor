@@ -247,7 +247,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="45" top="1980" width="9910" height="8800">
    </BOUNDS>
-   <BOUNDS type="Window" left="6105" top="3060" width="12840" height="7215">
+   <BOUNDS type="Window" left="12150" top="2130" width="12840" height="7215">
    </BOUNDS>
    <PIN pinname="Touch" visible="1" slicecount="1" values="||">
    </PIN>
@@ -258,6 +258,8 @@
    <PIN pinname="Rotate Unlocked" visible="1">
    </PIN>
    <PIN pinname="Translate Unlocked" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="40" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 2" linkstyle="VHV">
@@ -278,6 +280,8 @@
    <PIN pinname="Emulate Touch" visible="1">
    </PIN>
    <PIN pinname="Recording" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layer 3" linkstyle="Bezier">
@@ -330,12 +334,12 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7230" top="3495" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7230" top="3495" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="14040" top="8550" width="11865" height="9450">
+   <BOUNDS type="Window" left="14670" top="8160" width="11865" height="9450">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -347,14 +351,14 @@
    </PIN>
    <PIN pinname="Touch" visible="1">
    </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 4" linkstyle="Bezier">
    <LINKPOINT x="7260" y="6495">
    </LINKPOINT>
    <LINKPOINT x="4320" y="5775">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="87" srcpinname="Canvas Transform" dstnodeid="86" dstpinname="Canvas Transform">
    </LINK>
    <NODE systemname="AcceptClearMenu" filename="animator\AcceptClearMenu.v4p" componentmode="Hidden" id="102" nodename="animator\AcceptClearMenu.v4p">
    <BOUNDS type="Node" left="10710" top="6030" width="100" height="100">
@@ -372,6 +376,8 @@
    <PIN pinname="Clear" visible="1">
    </PIN>
    <PIN pinname="Accept" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="102" srcpinname="Accept" dstnodeid="123" dstpinname="Y Input Value">
@@ -481,7 +487,7 @@
    <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="Hidden" id="128">
    <BOUNDS type="Node" left="7155" top="2310" width="1410" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="-18000" top="4020" width="17445" height="11550">
+   <BOUNDS type="Window" left="-17850" top="13500" width="17445" height="11550">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -490,6 +496,8 @@
    <PIN pinname="Brush Size" visible="1">
    </PIN>
    <PIN pinname="Brush Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 5">
@@ -507,5 +515,53 @@
    <LINK srcnodeid="128" srcpinname="Brush Color" dstnodeid="87" dstpinname="Brush Color">
    </LINK>
    <LINK srcnodeid="103" srcpinname="Touch Data" dstnodeid="87" dstpinname="Touch">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="157">
+   <BOUNDS type="Node" left="5850" top="4845" width="2025" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Scale Unlocked" dstnodeid="157" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Rotate Unlocked" dstnodeid="157" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Translate Unlocked" dstnodeid="157" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="GUIElementTransforms" filename="animator\GUIElementTransforms.v4p" componentmode="Hidden" id="159" nodename="animator\GUIElementTransforms.v4p">
+   <BOUNDS type="Node" left="4875" top="840" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4875" top="840" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-17775" top="4095" width="11775" height="7890">
+   </BOUNDS>
+   <PIN pinname="Transform Lock Buttons" visible="1">
+   </PIN>
+   <PIN pinname="Drawing Canvas" visible="1">
+   </PIN>
+   <PIN pinname="Color Palette" visible="1">
+   </PIN>
+   <PIN pinname="Record Button" visible="1">
+   </PIN>
+   <PIN pinname="Accept Clear Buttons" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="Lock Transform Buttons" dstnodeid="40" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Drawing Canvas" dstnodeid="87" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Drawing Canvas" dstnodeid="86" dstpinname="Canvas Transform">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Color Palette" dstnodeid="128" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Record Button" dstnodeid="67" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Accept Clear Buttons" dstnodeid="102" dstpinname="Transform">
    </LINK>
    </PATCH>
