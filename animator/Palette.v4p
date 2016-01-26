@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="120" scrolly="0">
-   <BOUNDS type="Window" left="-17850" top="13500" width="17445" height="11550">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="0" scrolly="225">
+   <BOUNDS type="Window" left="-18000" top="11625" width="17445" height="11550">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -483,6 +483,8 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="45" srcpinname="Texture Out" dstnodeid="44" dstpinname="Texture">
    </LINK>
@@ -851,7 +853,11 @@
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="73" srcpinname="Layer" dstnodeid="8" dstpinname="Layer 8" linkstyle="VHV">
@@ -909,7 +915,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="0,-0.52,0">
+   <PIN pinname="Y Input Value" slicecount="3" values="-0.12,-0.52,0">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -929,7 +935,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.005">
+   <PIN pinname="Input 2" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -951,18 +957,6 @@
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Input 2XYZ">
    </LINK>
    <LINK srcnodeid="79" srcpinname="OutputXYZ" dstnodeid="74" dstpinname="Scale XYZ">
-   </LINK>
-   <NODE systemname="Cons (Color)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Color)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="15075" top="7980" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="|1.00000,0.14846,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="73" dstpinname="Color">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="82">
    <BOUNDS type="Node" left="4950" top="9510" width="100" height="100">
@@ -1058,14 +1052,6 @@
    <LINKPOINT x="5370" y="9315">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="81" dstpinname="Input 2">
-   <LINKPOINT x="16545" y="9735">
-   </LINKPOINT>
-   <LINKPOINT x="16545" y="7560">
-   </LINKPOINT>
-   <LINKPOINT x="15510" y="7560">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="88" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="14490" top="1245" width="795" height="240">
    </BOUNDS>
@@ -1117,5 +1103,161 @@
    <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="41" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="70" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Decompose (Transform Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Decompose (Transform Vector)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="10050" top="2370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="ScaleXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Transform Out" dstnodeid="91" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="92" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10260" top="3075" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10260" top="3075" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values=",,">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="ScaleXYZ" dstnodeid="92" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="93">
+   <BOUNDS type="Node" left="10110" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="92" srcpinname="Y Output Value" dstnodeid="93" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="94">
+   <BOUNDS type="Node" left="10020" top="5355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="X" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Y" dstnodeid="94" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="95" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10035" top="6165" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10035" top="6165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="95" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="9750" top="6660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="100">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="96" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="16635" top="7815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="2" values="..\assets\BrushOutline.png,">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="103" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="16620" top="7275" width="1725" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16620" top="7275" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\assets\BrushOutline.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="13845" top="7050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="104" srcpinname="Render State" dstnodeid="73" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="DynamicTexture (DX11.Texture 2d Color)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d Color)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="15120" top="7470" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Data" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Texture 2d)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="15105" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Output String" dstnodeid="98" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Output" dstnodeid="73" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Texture Out" dstnodeid="106" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Texture Out" dstnodeid="106" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="105" dstpinname="Data">
+   <LINKPOINT x="12540" y="9720">
+   </LINKPOINT>
+   <LINKPOINT x="12525" y="7305">
+   </LINKPOINT>
+   <LINKPOINT x="15945" y="7230">
+   </LINKPOINT>
    </LINK>
    </PATCH>
