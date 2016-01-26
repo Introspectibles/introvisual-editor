@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="495" top="1725" width="14250" height="14535">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -336,12 +336,12 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="7455" top="2970" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="14670" top="8160" width="11865" height="9450">
+   <BOUNDS type="Window" left="-17610" top="13815" width="11865" height="9450">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -468,7 +468,7 @@
    </LINK>
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="90" dstpinname="Input">
    </LINK>
-   <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="InAWindow" id="128">
+   <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="Hidden" id="128">
    <BOUNDS type="Node" left="8385" top="1320" width="2100" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="-18000" top="11625" width="17445" height="11550">
