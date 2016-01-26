@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Painting.v4p" systemname="HandlePainting" filename="C:\vvvv\projects\vvvv.permeable.screens\subpatches\HandlePainting.v4p" scrollx="15" scrolly="0">
-   <BOUNDS type="Window" left="-16950" top="6120" width="16140" height="13050">
+   <BOUNDS type="Window" left="-17430" top="2355" width="15525" height="12375">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -477,7 +477,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Brush">
    </PIN>
@@ -564,8 +564,6 @@
    </LINK>
    <LINK srcnodeid="120" srcpinname="Layer" dstnodeid="122" dstpinname="Layer">
    </LINK>
-   <LINK srcnodeid="35" srcpinname="Transform Out" dstnodeid="120" dstpinname="Transform In">
-   </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="127">
    <BOUNDS type="Node" left="1260" top="6015" width="100" height="100">
    </BOUNDS>
@@ -575,8 +573,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="127" srcpinname="Render State" dstnodeid="121" dstpinname="Render State">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="35" dstpinname="TranslateXY">
    </LINK>
    <NODE id="60" systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="5808" top="3294" width="100" height="100">
@@ -615,5 +611,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="122" srcpinname="Buffers" dstnodeid="128" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="35" dstpinname="TranslateXY">
+   </LINK>
+   <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="144">
+   <BOUNDS type="Node" left="2295" top="4785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output Node" dstnodeid="144" dstpinname="Source" linkstyle="Bezier">
+   <LINKPOINT x="1650" y="2663">
+   </LINKPOINT>
+   <LINKPOINT x="2850" y="2663">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="2295" top="5205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Transform Out" dstnodeid="35" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Transform Out" dstnodeid="147" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Transform Out" dstnodeid="120" dstpinname="Transform In">
    </LINK>
    </PATCH>
