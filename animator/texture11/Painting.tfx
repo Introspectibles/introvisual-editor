@@ -1,0 +1,60 @@
+//@author: Renaud Gervais
+//@help: Simple painting and eraser functions for paint application
+//@tags: texture
+//@credits: 
+
+Texture2D tex : PREVIOUS;
+Texture2D brush <string uiname="Brush Texture";>;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+float4 pPaint(psInput input) : SV_Target
+{
+	float4 c = tex.Sample(linearSampler,input.uv);
+	float4 b = brush.Sample(linearSampler,input.uv);
+	
+	float3 blended = b.rgb + ((1-b.a) * c.rgb);
+	float alpha = c.a + (1-c.a)* b.a;
+	
+	return float4(blended, alpha);
+}
+
+float4 pErase(psInput input) : SV_Target
+{
+	float4 c = tex.Sample(linearSampler,input.uv);
+	float4 b = brush.Sample(linearSampler,input.uv);
+	
+	return float4(c.rgb, c.a-b.a);
+}
+
+
+technique10 Paint
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,pPaint()));
+	}
+}
+
+technique10 Eraser
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,pErase()));
+	}
+}
+
+
+
