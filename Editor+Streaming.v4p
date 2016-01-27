@@ -15,6 +15,10 @@
    </PIN>
    <PIN pinname="Emulate Touch" slicecount="1" values="1">
    </PIN>
+   <BOUNDS type="Window" left="7080" top="2910" width="14250" height="14535">
+   </BOUNDS>
+   <PIN pinname="Input Signal" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="StreamAnimation" filename="animator\StreamAnimation.v4p" componentmode="Hidden" id="1" nodename="animator\StreamAnimation.v4p">
    <BOUNDS type="Node" left="1455" top="3960" width="100" height="100">
@@ -57,5 +61,45 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="1" dstpinname="Remote Host">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="4620" top="720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="4620" top="1230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shape" slicecount="1" values="Triangle">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
+   <BOUNDS type="Node" left="4620" top="2010" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4620" top="2010" width="495" height="1140">
+   </BOUNDS>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input Signal">
    </LINK>
    </PATCH>
