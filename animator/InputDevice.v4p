@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\subpatches\animator\InputDevice.v4p" systemname="InputDevice" filename="C:\vvvv\projects\meegi\subpatches\animator\InputDevice.v4p" scrollx="15" scrolly="-315">
-   <BOUNDS type="Window" left="4410" top="4740" width="11805" height="11175">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\InputDevice.v4p" systemname="InputDevice" filename="C:\vvvv\projects\meegi\subpatches\animator\InputDevice.v4p" scrollx="15" scrolly="360">
+   <BOUNDS type="Window" left="12075" top="5355" width="11805" height="11175">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -103,7 +103,7 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
@@ -120,7 +120,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="3">
+   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="6810" top="2860" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
@@ -230,7 +230,7 @@
    </NODE>
    <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="5" dstpinname="Input Node">
    </LINK>
-   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="15">
+   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="3015" top="8535" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Id" visible="1">
@@ -352,12 +352,6 @@
    </NODE>
    <LINK srcnodeid="23" srcpinname="XYZ" dstnodeid="24" dstpinname="XYZ UnTransformed">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="24" dstpinname="Transform" linkstyle="Bezier">
-   <LINKPOINT x="8880" y="2715">
-   </LINKPOINT>
-   <LINKPOINT x="6165" y="2715">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="xy (2d)" nodename="xy (2d)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="6105" top="4245" width="100" height="100">
    </BOUNDS>
@@ -375,5 +369,45 @@
    </LINKPOINT>
    <LINKPOINT x="3960" y="5625">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="Switch (Transform Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\TransformsAdvanced.dll" nodename="Switch (Transform Advanced)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="6105" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Transform 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6120" top="855" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6120" top="855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Apply A/R to Touch Data|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="25" dstpinname="Transform 2" linkstyle="Bezier">
+   <LINKPOINT x="8930" y="2488">
+   </LINKPOINT>
+   <LINKPOINT x="6610" y="2508">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="24" dstpinname="Transform">
    </LINK>
    </PATCH>

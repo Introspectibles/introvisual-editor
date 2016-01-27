@@ -53,7 +53,7 @@
    <LINK srcnodeid="1" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layers">
    </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="4500" top="9450" width="100" height="100">
+   <BOUNDS type="Node" left="4485" top="9435" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -65,7 +65,7 @@
    <LINK srcnodeid="0" srcpinname="Actual BackBuffer SizeXY" dstnodeid="7" dstpinname="XY">
    </LINK>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="4260" top="9900" width="100" height="100">
+   <BOUNDS type="Node" left="4245" top="9885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Aspect Width" visible="1">
    </PIN>
@@ -99,7 +99,7 @@
    <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 1">
    </LINK>
    <NODE nodename="S (Node)" id="33" systemname="S (Node)">
-   <BOUNDS type="Node" left="2400" top="13485" width="0" height="0">
+   <BOUNDS type="Node" left="2550" top="10770" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="|Mouse Animator|">
    </PIN>
@@ -107,91 +107,15 @@
    </PIN>
    </NODE>
    <NODE nodename="S (Node)" id="71" systemname="S (Node)">
-   <BOUNDS type="Node" left="5550" top="12705" width="0" height="0">
+   <BOUNDS type="Node" left="3030" top="10335" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="|Touch Data Animator|">
    </PIN>
    <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="TouchState (System Split)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Split)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="5520" top="10260" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Touch Data" visible="1">
-   </PIN>
-   <PIN pinname="PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Id" visible="1">
-   </PIN>
-   <PIN pinname="Is New" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Touch Data" dstnodeid="76" dstpinname="Touch Data">
-   </LINK>
-   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="4815" top="11310" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ UnTransformed" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="XYZ Transformed" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="80">
-   <BOUNDS type="Node" left="5910" top="10770" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="76" srcpinname="PositionXY" dstnodeid="80" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="80" srcpinname="XYZ" dstnodeid="78" dstpinname="XYZ UnTransformed">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="78" dstpinname="Transform" linkstyle="Bezier">
-   <LINKPOINT x="4305" y="10740">
-   </LINKPOINT>
-   <LINKPOINT x="4830" y="10740">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="xy (2d)" nodename="xy (2d)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="4800" top="11715" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="78" srcpinname="XYZ Transformed" dstnodeid="81" dstpinname="XYZ">
-   </LINK>
-   <NODE systemname="TouchState (System Join)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="TouchState (System Join)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="5535" top="12135" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Id" visible="1">
-   </PIN>
-   <PIN pinname="Is New" visible="1">
-   </PIN>
-   <PIN pinname="PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Touch Data" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="76" srcpinname="Id" dstnodeid="83" dstpinname="Id">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Is New" dstnodeid="83" dstpinname="Is New">
-   </LINK>
-   <LINK srcnodeid="81" srcpinname="XY" dstnodeid="83" dstpinname="PositionXY" linkstyle="VHV">
-   <LINKPOINT x="4825" y="12045">
-   </LINKPOINT>
-   <LINKPOINT x="5975" y="12045">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="83" srcpinname="Touch Data" dstnodeid="71" dstpinname="Input Value">
-   </LINK>
    <NODE nodename="S (Node)" id="88" systemname="S (Node)">
-   <BOUNDS type="Node" left="4245" top="13485" width="0" height="0">
+   <BOUNDS type="Node" left="4230" top="10785" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="|Animator A/R|">
    </PIN>
@@ -336,12 +260,12 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="7455" top="2970" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="-16170" top="10530" width="13575" height="8835">
+   <BOUNDS type="Window" left="13140" top="8505" width="13575" height="8835">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -423,9 +347,9 @@
    <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Emulate Touch">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Mouse State" dstnodeid="33" dstpinname="Input Value" linkstyle="Bezier">
-   <LINKPOINT x="3525" y="11385">
+   <LINKPOINT x="3510" y="10028">
    </LINKPOINT>
-   <LINKPOINT x="2430" y="11385">
+   <LINKPOINT x="2595" y="10028">
    </LINKPOINT>
    </LINK>
    <NODE id="90" systemname="AvoidNIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\AvoidNIL (Node).v4p" nodename="AvoidNIL (Node)" componentmode="Hidden">
@@ -696,6 +620,12 @@
    <LINKPOINT x="4530" y="2835">
    </LINKPOINT>
    <LINKPOINT x="11415" y="2835">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Touch Data" dstnodeid="71" dstpinname="Input Value" linkstyle="Bezier">
+   <LINKPOINT x="4260" y="9795">
+   </LINKPOINT>
+   <LINKPOINT x="3090" y="9795">
    </LINKPOINT>
    </LINK>
    </PATCH>
