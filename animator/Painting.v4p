@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Painting.v4p" systemname="HandlePainting" filename="C:\vvvv\projects\vvvv.permeable.screens\subpatches\HandlePainting.v4p" scrollx="0" scrolly="-720">
-   <BOUNDS type="Window" left="2655" top="2055" width="13215" height="13560">
+   <BOUNDS type="Window" left="-17625" top="11550" width="13215" height="15360">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
