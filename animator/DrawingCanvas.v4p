@@ -474,4 +474,14 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="59" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3480" top="7455" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3480" top="7455" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Tex">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Tex" dstnodeid="59" dstpinname="Input Node">
+   </LINK>
    </PATCH>

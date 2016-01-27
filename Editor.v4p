@@ -151,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="123" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11445" top="12165" width="480" height="480">
+   <BOUNDS type="Box" left="11445" top="12405" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11445" top="12165" width="0" height="0">
+   <BOUNDS type="Node" left="11445" top="12405" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -246,7 +246,7 @@
    <PIN pinname="Recording done" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="122" dstpinname="Input Node" linkstyle="Bezier">
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="122" dstpinname="Input Node" linkstyle="Bezier" hiddenwhenlocked="1">
    <LINKPOINT x="4710" y="9183">
    </LINKPOINT>
    <LINKPOINT x="8400" y="8833">
@@ -260,7 +260,7 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="7455" top="2970" width="4800" height="3600">
@@ -289,6 +289,8 @@
    </PIN>
    <PIN pinname="Drawing Transform" visible="1">
    </PIN>
+   <PIN pinname="Tex" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 4" linkstyle="Bezier">
    <LINKPOINT x="7010" y="6795">
@@ -316,7 +318,7 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="102" srcpinname="Accept" dstnodeid="123" dstpinname="Y Input Value">
+   <LINK srcnodeid="102" srcpinname="Accept" dstnodeid="123" dstpinname="Y Input Value" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="86" srcpinname="Recording done" dstnodeid="102" dstpinname="Display menu" linkstyle="VHV">
    <LINKPOINT x="10620" y="5825">
@@ -343,52 +345,6 @@
    </LINKPOINT>
    <LINKPOINT x="1395" y="11978">
    </LINKPOINT>
-   </LINK>
-   <NODE id="90" systemname="AvoidNIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\AvoidNIL (Node).v4p" nodename="AvoidNIL (Node)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8030" top="7005" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="89" systemname="InputMorph (Transform Spectral)" filename="..\vvvv.nodes\plugins\SpectralInputMorph\SpectralInputMorph.csproj" nodename="InputMorph (Transform Spectral)" componentmode="Hidden">
-   <PIN pinname="Switch" slicecount="1" visible="1" values="1">
-   </PIN>
-   <BOUNDS type="Node" left="7000" top="7500" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="92" systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8950" top="8290" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" slicecount="1" values="0.4">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="91" systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8800" top="9020" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,0.12995,0.12995,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="92" srcpinname="Transform Out" dstnodeid="91" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="92" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="89" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="90" dstpinname="Input">
    </LINK>
    <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="Hidden" id="128">
    <BOUNDS type="Node" left="8385" top="1320" width="2100" height="270">
@@ -665,5 +621,19 @@
    <LINK srcnodeid="168" srcpinname="Down Edge" dstnodeid="169" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="169" srcpinname="Output" dstnodeid="86" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="170" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="10140" top="12405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10140" top="12405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Tex">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Tex" dstnodeid="170" dstpinname="Input Node" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="11400" y="7845">
+   </LINKPOINT>
+   <LINKPOINT x="10170" y="7845">
+   </LINKPOINT>
    </LINK>
    </PATCH>
