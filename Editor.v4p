@@ -216,7 +216,7 @@
    <LINKPOINT x="3315" y="6928">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="RecordTransforms" filename="animator\RecordTransforms.v4p" componentmode="InAWindow" id="86" nodename="animator\RecordTransforms.v4p">
+   <NODE systemname="RecordTransforms" filename="animator\RecordTransforms.v4p" componentmode="Hidden" id="86" nodename="animator\RecordTransforms.v4p">
    <BOUNDS type="Node" left="4665" top="5340" width="5955" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="4665" top="5340" width="4800" height="3600">
