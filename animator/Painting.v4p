@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Painting.v4p" systemname="HandlePainting" filename="C:\vvvv\projects\vvvv.permeable.screens\subpatches\HandlePainting.v4p" scrollx="1485" scrolly="0">
-   <BOUNDS type="Window" left="2565" top="930" width="13215" height="13560">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Painting.v4p" systemname="HandlePainting" filename="C:\vvvv\projects\vvvv.permeable.screens\subpatches\HandlePainting.v4p" scrollx="0" scrolly="-720">
+   <BOUNDS type="Window" left="2655" top="2055" width="13215" height="13560">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -539,7 +539,7 @@
    </PIN>
    <PIN pinname="BrushSize" slicecount="1" visible="1" values="0.09">
    </PIN>
-   <PIN pinname="Hardness" slicecount="1" values="0.36">
+   <PIN pinname="Hardness" slicecount="1" values="0.75">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -623,7 +623,7 @@
    </PIN>
    <PIN pinname="Brush Texture" visible="1">
    </PIN>
-   <PIN pinname="Technique" slicecount="1" values="Paint" visible="1">
+   <PIN pinname="Technique" slicecount="1" visible="1" values="Paint">
    </PIN>
    </NODE>
    <NODE systemname="DynamicTexture (DX11.Texture 2d Color)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d Color)" componentmode="Hidden" id="179">

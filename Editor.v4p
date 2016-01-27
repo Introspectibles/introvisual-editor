@@ -336,12 +336,12 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
-   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
+   <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="InAWindow" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="7455" top="2970" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4065" top="4530" width="13575" height="8835">
+   <BOUNDS type="Window" left="2460" top="5340" width="13575" height="8835">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -358,6 +358,8 @@
    <PIN pinname="Drawing Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Eraser" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 4" linkstyle="Bezier">
@@ -665,5 +667,27 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="128" srcpinname="Eraser" dstnodeid="87" dstpinname="Eraser">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="167" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10800" top="975" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10800" top="975" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Clear">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Clear">
    </LINK>
    </PATCH>
