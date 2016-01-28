@@ -11,7 +11,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2310" top="10965" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="14865" top="0" width="12000" height="8130">
+   <BOUNDS type="Window" left="13650" top="345" width="12000" height="8130">
    </BOUNDS>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
