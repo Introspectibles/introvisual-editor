@@ -221,9 +221,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4665" top="5340" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1770" top="1050" width="15240" height="16455">
+   <BOUNDS type="Window" left="5310" top="4410" width="15240" height="16455">
    </BOUNDS>
-   <PIN pinname="Record" visible="1">
+   <PIN pinname="Record" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Scale Unlocked" visible="1">
    </PIN>
@@ -257,8 +257,6 @@
    <LINK srcnodeid="40" srcpinname="Rotate Unlocked" dstnodeid="86" dstpinname="Rotate Unlocked">
    </LINK>
    <LINK srcnodeid="40" srcpinname="Translate Unlocked" dstnodeid="86" dstpinname="Translate Unlocked">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record">
    </LINK>
    <NODE systemname="DrawingCanvas" filename="animator\DrawingCanvas.v4p" componentmode="Hidden" id="87" nodename="animator\DrawingCanvas.v4p">
    <BOUNDS type="Node" left="7455" top="2970" width="3990" height="270">
@@ -662,6 +660,12 @@
    <LINKPOINT x="510" y="4740">
    </LINKPOINT>
    <LINKPOINT x="6750" y="495">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="86" dstpinname="Record" linkstyle="Bezier">
+   <LINKPOINT x="4530" y="3863">
+   </LINKPOINT>
+   <LINKPOINT x="4680" y="3863">
    </LINKPOINT>
    </LINK>
    </PATCH>

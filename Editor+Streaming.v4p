@@ -13,14 +13,16 @@
    </PIN>
    <PIN pinname="Accept" visible="1">
    </PIN>
-   <PIN pinname="Emulate Touch" slicecount="1" values="1">
+   <PIN pinname="Emulate Touch" slicecount="1" values="1" visible="1">
    </PIN>
    <BOUNDS type="Window" left="7080" top="2910" width="14250" height="14535">
    </BOUNDS>
    <PIN pinname="Input Signal" visible="1">
    </PIN>
+   <PIN pinname="Clear canvas" visible="1">
+   </PIN>
    </NODE>
-   <NODE systemname="StreamAnimation" filename="animator\StreamAnimation.v4p" componentmode="InAWindow" id="1" nodename="animator\StreamAnimation.v4p">
+   <NODE systemname="StreamAnimation" filename="animator\StreamAnimation.v4p" componentmode="Hidden" id="1" nodename="animator\StreamAnimation.v4p">
    <BOUNDS type="Node" left="1455" top="3960" width="2355" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="1455" top="3960" width="4800" height="3600">
@@ -101,5 +103,49 @@
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input Signal">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1425" top="555" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1425" top="555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Emulate Touch|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Emulate Touch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2715" top="780" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2715" top="780" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Clear canvas|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Clear canvas">
    </LINK>
    </PATCH>
