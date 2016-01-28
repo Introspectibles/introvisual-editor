@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="3090" scrolly="435">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="-18000" top="11625" width="17445" height="11550">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -283,7 +283,7 @@
    </PIN>
    <PIN pinname="Y" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="-0.25">
+   <PIN pinname="Z" slicecount="1" values="0.25">
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Transform Out" dstnodeid="25" dstpinname="Transform">
@@ -969,7 +969,7 @@
    </PIN>
    <PIN pinname="Value" visible="1" slicecount="1" values="0.548123502433245">
    </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="1" visible="1">
+   <PIN pinname="Alpha" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="83">
@@ -1151,7 +1151,7 @@
    <NODE systemname="DynamicTexture (DX11.Texture 2d Color)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d Color)" componentmode="Hidden" id="105">
    <BOUNDS type="Node" left="15120" top="7470" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Data" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|" visible="1">
+   <PIN pinname="Data" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
