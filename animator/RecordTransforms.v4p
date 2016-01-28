@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0" bgcolor="14935011">
    <BOUNDS type="Window" left="1770" top="1050" width="15240" height="16455">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -556,12 +556,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="72" dstpinname="Set" linkstyle="VHV">
-   <LINKPOINT x="3150" y="2700">
-   </LINKPOINT>
-   <LINKPOINT x="5250" y="2700">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="72" srcpinname="Output" dstnodeid="38" dstpinname="Rotate" linkstyle="Bezier">
    <LINKPOINT x="4965" y="6600">
    </LINKPOINT>
@@ -569,43 +563,31 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="8265" top="4560" width="100" height="100">
+   <BOUNDS type="Node" left="8265" top="4860" width="405" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Set" linkstyle="VHV">
-   <LINKPOINT x="1815" y="4350">
-   </LINKPOINT>
-   <LINKPOINT x="8640" y="4350">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="38" dstpinname="ScaleXY" linkstyle="Bezier">
-   <LINKPOINT x="8265" y="6570">
+   <LINKPOINT x="8265" y="6770">
    </LINKPOINT>
-   <LINKPOINT x="6315" y="6570">
+   <LINKPOINT x="6315" y="6670">
    </LINKPOINT>
    </LINK>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="6585" top="4560" width="100" height="100">
+   <BOUNDS type="Node" left="6585" top="4710" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Set" linkstyle="VHV">
-   <LINKPOINT x="4560" y="4485">
-   </LINKPOINT>
-   <LINKPOINT x="6960" y="4485">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Output" dstnodeid="32" dstpinname="PositionXY">
    </LINK>
    <NODE systemname="BlobState (PatternTouch Join)" filename="PatternTouch\nodes\plugins\PatternTouch.dll" nodename="BlobState (PatternTouch Join)" componentmode="Hidden" id="17">
@@ -713,7 +695,7 @@
    </PIN>
    <PIN pinname="Aspect Ration" visible="1">
    </PIN>
-   <PIN pinname="Reset" visible="1">
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Scale" visible="1">
    </PIN>
@@ -730,18 +712,90 @@
    <LINKPOINT x="8415" y="3285">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="13530" y="3375">
-   </LINKPOINT>
-   <LINKPOINT x="9000" y="3375">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="24" srcpinname="Scale" dstnodeid="73" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="24" dstpinname="Blobs" linkstyle="Bezier">
    <LINKPOINT x="8385" y="3285">
    </LINKPOINT>
    <LINKPOINT x="8790" y="3285">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="8610" top="4425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 2" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3608">
+   </LINKPOINT>
+   <LINKPOINT x="8970" y="3608">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="1845" y="2573">
+   </LINKPOINT>
+   <LINKPOINT x="8610" y="2573">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3375">
+   </LINKPOINT>
+   <LINKPOINT x="9000" y="3375">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Set">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="6930" top="4335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="76" dstpinname="Input 2" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3563">
+   </LINKPOINT>
+   <LINKPOINT x="7290" y="3563">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="76" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="4590" y="2535">
+   </LINKPOINT>
+   <LINKPOINT x="6930" y="2535">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="74" dstpinname="Set">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="5235" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="72" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="3150" y="2528">
+   </LINKPOINT>
+   <LINKPOINT x="5235" y="2528">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Input 2" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3548">
+   </LINKPOINT>
+   <LINKPOINT x="5595" y="3548">
    </LINKPOINT>
    </LINK>
    </PATCH>
