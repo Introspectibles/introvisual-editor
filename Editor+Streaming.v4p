@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Accept" visible="1">
    </PIN>
-   <PIN pinname="Emulate Touch" slicecount="1" values="1" visible="1">
+   <PIN pinname="Emulate Touch" slicecount="1" visible="1" values="1">
    </PIN>
    <BOUNDS type="Window" left="7080" top="2910" width="14250" height="14535">
    </BOUNDS>
