@@ -283,7 +283,7 @@
    </PIN>
    <PIN pinname="Y" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.25">
+   <PIN pinname="Z" slicecount="1" values="-0.25">
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Transform Out" dstnodeid="25" dstpinname="Transform">
