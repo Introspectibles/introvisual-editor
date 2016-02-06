@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p" systemname="Editor+Streaming" filename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p">
-   <BOUNDS type="Window" left="270" top="375" width="9000" height="6000">
+   <BOUNDS type="Window" left="270" top="375" width="12450" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Editor" filename="Editor.v4p" nodename="Editor.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1440" top="1215" width="1005" height="270">
+   <BOUNDS type="Node" left="1440" top="2565" width="1005" height="270">
    </BOUNDS>
    <PIN pinname="Recorded animation" visible="1">
    </PIN>
@@ -17,7 +17,7 @@
    </PIN>
    <BOUNDS type="Window" left="7080" top="2910" width="14250" height="14535">
    </BOUNDS>
-   <PIN pinname="Input Signal" visible="1">
+   <PIN pinname="Input Signal" visible="1" slicecount="1" values="0.233526881167199">
    </PIN>
    <PIN pinname="Clear canvas" visible="1">
    </PIN>
@@ -64,50 +64,10 @@
    </NODE>
    <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="1" dstpinname="Remote Host">
    </LINK>
-   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="4620" top="720" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Period" slicecount="1" values="10">
-   </PIN>
-   </NODE>
-   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="4620" top="1230" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shape" slicecount="1" values="Triangle">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
-   <BOUNDS type="Node" left="4620" top="2010" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4620" top="2010" width="495" height="1140">
-   </BOUNDS>
-   <PIN pinname="Show Slider" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input Signal">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1425" top="555" width="480" height="480">
+   <BOUNDS type="Box" left="1425" top="1905" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1425" top="555" width="0" height="0">
+   <BOUNDS type="Node" left="1425" top="1905" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -127,9 +87,9 @@
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Emulate Touch">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2715" top="780" width="480" height="480">
+   <BOUNDS type="Box" left="2715" top="2130" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2715" top="780" width="0" height="0">
+   <BOUNDS type="Node" left="2715" top="2130" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -147,5 +107,105 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Clear canvas">
+   </LINK>
+   <NODE systemname="IP (Network)" nodename="IP (Network)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="7290" top="525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Description" visible="1">
+   </PIN>
+   <PIN pinname="IP" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="DropDown (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\DropDown (String).dll" nodename="DropDown (String)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="7290" top="1155" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7290" top="1155" width="3345" height="480">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4185" top="11070" width="3240" height="2085">
+   </BOUNDS>
+   <PIN pinname="List Item" visible="1">
+   </PIN>
+   <PIN pinname="Selected Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Description" dstnodeid="13" dstpinname="List Item">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="7980" top="1935" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="IP" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Selected Index" dstnodeid="12" dstpinname="Index" linkstyle="Bezier">
+   <LINKPOINT x="7350" y="1770">
+   </LINKPOINT>
+   <LINKPOINT x="8595" y="1770">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7995" top="2790" width="2640" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7995" top="2790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="15">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="11" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7320" top="3870" width="14475" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7320" top="3870" width="3960" height="1020">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|The editor and the receiver patches work in pair. The Editor let users create and animate a hand-drawn texture. The receiver provide the signal which will animate the texture (should be between 0 and 1)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="17" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4110" top="3360" width="2190" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4110" top="3360" width="2190" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Enter the receiver&apos;s IP here|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="InputSignal" filename="animator\InputSignal.v4p" componentmode="Hidden" id="18" nodename="animator\InputSignal.v4p">
+   <BOUNDS type="Node" left="1905" top="1050" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1905" top="1050" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7545" top="8715" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Signal" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Signal" dstnodeid="0" dstpinname="Input Signal">
    </LINK>
    </PATCH>
