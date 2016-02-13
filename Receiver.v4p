@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Receiver.v4p" systemname="Receiver" filename="C:\vvvv\projects\introvisual-editor\Receiver.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="1965" top="6960" width="15870" height="11040">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\introvisual-editor\Receiver.v4p" systemname="Receiver" filename="C:\vvvv\projects\introvisual-editor\Receiver.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="1785" top="2460" width="15870" height="11040">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -168,41 +168,15 @@
    </LINK>
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="47" dstpinname="Insert">
    </LINK>
-   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="46">
-   <BOUNDS type="Node" left="8580" top="2325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Down Edge" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="46" dstpinname="Input" linkstyle="Bezier">
-   <LINKPOINT x="8445" y="2153">
-   </LINKPOINT>
-   <LINKPOINT x="8595" y="2153">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="8715" top="2775" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="46" srcpinname="Down Edge" dstnodeid="45" dstpinname="Input 1" linkstyle="Bezier">
-   <LINKPOINT x="9240" y="2670">
-   </LINKPOINT>
-   <LINKPOINT x="8775" y="2670">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="45" srcpinname="Output 1" dstnodeid="47" dstpinname="Reset">
-   </LINK>
-   <LINK srcnodeid="46" srcpinname="Down Edge" dstnodeid="50" dstpinname="Set" linkstyle="VHV">
-   <LINKPOINT x="9270" y="4845">
-   </LINKPOINT>
-   <LINKPOINT x="8550" y="4845">
-   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="48" dstpinname="Input">
    </LINK>
@@ -485,19 +459,13 @@
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="78" dstpinname="Insert">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="5775" top="2370" width="100" height="100">
+   <BOUNDS type="Node" left="6645" top="2400" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="77" dstpinname="Input" linkstyle="Bezier">
-   <LINKPOINT x="5640" y="2198">
-   </LINKPOINT>
-   <LINKPOINT x="5790" y="2198">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="76">
    <BOUNDS type="Node" left="5910" top="2820" width="100" height="100">
    </BOUNDS>
@@ -507,17 +475,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Down Edge" dstnodeid="76" dstpinname="Input 1" linkstyle="Bezier">
-   <LINKPOINT x="6435" y="2715">
+   <LINKPOINT x="7305" y="2730">
    </LINKPOINT>
-   <LINKPOINT x="5970" y="2715">
+   <LINKPOINT x="5970" y="2730">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="76" srcpinname="Output 1" dstnodeid="78" dstpinname="Reset">
    </LINK>
    <LINK srcnodeid="77" srcpinname="Down Edge" dstnodeid="81" dstpinname="Set" linkstyle="VHV">
-   <LINKPOINT x="6465" y="4890">
+   <LINKPOINT x="7045" y="4910">
    </LINKPOINT>
-   <LINKPOINT x="5745" y="4890">
+   <LINKPOINT x="6035" y="4900">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Input">
@@ -740,6 +708,96 @@
    <BOUNDS type="Box" left="2640" top="6570" width="1515" height="645">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|v Enter the IP address of the editor patch|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="9510" top="1905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="104" dstpinname="Set">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="9525" top="2295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Down Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="104" srcpinname="Output" dstnodeid="105" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Down Edge" dstnodeid="45" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="10185" y="2655">
+   </LINKPOINT>
+   <LINKPOINT x="8775" y="2655">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Down Edge" dstnodeid="50" dstpinname="Set" linkstyle="VHV">
+   <LINKPOINT x="10215" y="4635">
+   </LINKPOINT>
+   <LINKPOINT x="8550" y="4635">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10035" top="1545" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10035" top="1545" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="107" srcpinname="Y Output Value" dstnodeid="104" dstpinname="Time">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="6660" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="108" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7185" top="1635" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7185" top="1635" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Y Output Value" dstnodeid="109" dstpinname="Time">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="109" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output" dstnodeid="77" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="110" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10545" top="1860" width="5595" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10545" top="1860" width="3885" height="510">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; MonoFlop is to be resilient in case of frames without any received packages|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
