@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="60" scrolly="0">
-   <BOUNDS type="Window" left="7080" top="2910" width="14250" height="14535">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\introvisual-editor\Editor.v4p" systemname="ANIMATOR" filename="C:\vvvv\projects\meegi\subpatches\ANIMATOR.v4p" scrollx="60" scrolly="0">
+   <BOUNDS type="Window" left="5220" top="570" width="14250" height="13560">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -237,7 +237,7 @@
    </PIN>
    <PIN pinname="Eraser" visible="1">
    </PIN>
-   <PIN pinname="Clear" visible="1">
+   <PIN pinname="Clear" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Recording" visible="1">
    </PIN>
@@ -297,7 +297,7 @@
    <NODE systemname="Palette" filename="animator\Palette.v4p" nodename="animator\Palette.v4p" componentmode="Hidden" id="128">
    <BOUNDS type="Node" left="8385" top="1320" width="2100" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="-18000" top="11625" width="17445" height="11550">
+   <BOUNDS type="Window" left="1695" top="1635" width="17445" height="11550">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -310,6 +310,8 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    <PIN pinname="Eraser" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="1" dstpinname="Layer 5" linkstyle="VHV">
@@ -483,9 +485,9 @@
    <LINK srcnodeid="128" srcpinname="Eraser" dstnodeid="87" dstpinname="Eraser">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="167" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10800" top="975" width="480" height="480">
+   <BOUNDS type="Box" left="10725" top="975" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="10800" top="975" width="0" height="0">
+   <BOUNDS type="Node" left="10725" top="975" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -501,9 +503,9 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Clear">
-   </LINK>
    <LINK srcnodeid="67" srcpinname="Recording" dstnodeid="87" dstpinname="Recording" linkstyle="VHV">
    <LINKPOINT x="4530" y="2835">
    </LINKPOINT>
@@ -717,5 +719,21 @@
    </LINKPOINT>
    <LINKPOINT x="4680" y="3863">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="10425" top="2250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="176" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Clear" dstnodeid="176" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="87" dstpinname="Clear">
    </LINK>
    </PATCH>

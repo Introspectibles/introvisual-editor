@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="-18000" top="11625" width="17445" height="11550">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\introvisual-editor\animator\Palette.v4p" systemname="Palette" filename="C:\vvvv\projects\introvisual-editor\animator\Palette.v4p" scrollx="4560" scrolly="0">
+   <BOUNDS type="Window" left="1695" top="1635" width="17445" height="11550">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -1197,6 +1197,8 @@
    </PIN>
    <PIN pinname="Value Output" visible="1">
    </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Id" dstnodeid="108" dstpinname="Touch Id" linkstyle="Bezier">
    <LINKPOINT x="7620" y="1388">
@@ -1357,5 +1359,73 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="108" srcpinname="Value Output" dstnodeid="118" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="TimerFlop (Animation)" filename="%VVVV%\addonpack\lib\nodes\plugins\TimerFlop.dll" nodename="TimerFlop (Animation)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="19680" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="120">
+   <BOUNDS type="Node" left="19770" top="3735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Down Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Hit" dstnodeid="120" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="120" srcpinname="Down Edge" dstnodeid="119" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="108" srcpinname="Hit" dstnodeid="119" dstpinname="Set">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="121" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="20040" top="3240" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20040" top="3240" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Y Output Value" dstnodeid="119" dstpinname="Time">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="124">
+   <BOUNDS type="Node" left="19680" top="4935" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="124" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="125" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="19680" top="10050" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="19680" top="10050" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Clear">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Up Edge" dstnodeid="125" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
