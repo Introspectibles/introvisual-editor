@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\introvisual-editor\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0" bgcolor="14935011">
-   <BOUNDS type="Window" left="5310" top="4410" width="15240" height="16455">
+   <BOUNDS type="Window" left="2610" top="0" width="15240" height="14540">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -424,12 +424,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="57" dstpinname="Transform 1" linkstyle="VHV">
-   <LINKPOINT x="2115" y="10985">
-   </LINKPOINT>
-   <LINKPOINT x="1200" y="11635">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="38" srcpinname="Transform Out" dstnodeid="57" dstpinname="Transform 2" linkstyle="Bezier">
    <LINKPOINT x="2115" y="10198">
    </LINKPOINT>
@@ -796,6 +790,22 @@
    <LINKPOINT x="13530" y="3548">
    </LINKPOINT>
    <LINKPOINT x="5595" y="3548">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Reverse (Transform Bin)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="Reverse (Transform Bin)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="2130" top="11370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="78" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="57" dstpinname="Transform 1" linkstyle="VHV">
+   <LINKPOINT x="2130" y="12050">
+   </LINKPOINT>
+   <LINKPOINT x="1200" y="12050">
    </LINKPOINT>
    </LINK>
    </PATCH>

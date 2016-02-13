@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p" systemname="Editor+Streaming" filename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p">
+   <PATCH nodename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p" systemname="Editor+Streaming" filename="C:\vvvv\projects\introvisual-editor\Editor+Streaming.v4p" locked="1">
    <BOUNDS type="Window" left="270" top="375" width="12450" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -49,7 +49,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2835" top="3375" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="localhost">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="192.168.1.75">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="192.168.1.1">
    </PIN>
@@ -69,7 +69,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1425" top="1905" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -81,7 +81,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Emulate Touch|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Emulate Touch">
